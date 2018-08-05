@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+{#   <div class="row">#}
+{#        <div class="container main-container headerOffset globalPaddingBottom">#}
+{##}
+{#            <div class="row">#}
+{#                <div class="col-lg-12 text-center">#}
+{#                    <div class="home-intro">#}
+{#                        <h2>Добро пожаловать в комиссионный магазин <span>на Раменках</span></h2>#}
+{#                    </div>#}
+{#                    <hr>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div style="clear:both"></div>#}
+{#            <div class="row">#}
+{#                <div class="col-sm-10 show-case-wrapper center-block relative">#}
+{#                    <div id="productShowCase" class="owl-carousel owl-theme">#}
+{#                            {% for product_image in products_images_slide %}#}
+{#                            {% include 'merchandise/product_item_home.html' %}#}
+{#                            {% endfor %}#}
+{#                    </div>#}
+{#                    <div style="clear:both;"></div>#}
+{#                    <a id="ps-next" class="ps-nav"> <i class="fas fa-angle-right"></i> </a> <a id="ps-prev" class="ps-nav"> <i class="fas fa-angle-left"></i> </a></div>#}
+{#                </div>#}
+{#        </div>#}
+{#   </div>#}
+{#    <div class="row featuredPostContainer">#}
+{#        <div class="featured-category"></div>#}
+{#        <div class="col-lg-12">#}
+{#            <h3 class="boxes-title-1"><span>НОВЫЕ ПОСТУПЛЕНИЯ</span></h3>#}
+{#        </div>#}
+{#        <div style="clear:both;"></div>#}
+{#        <div id="productslider" class="owl-carousel owl-theme">#}
+{#            {% for product_image in products_images %}#}
+{#                    {% include 'landing/product_item.html' %}#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#        <!--/.productslider-->#}
+{##}
+{#    </div>#}
+{#    <!--/.featuredPostContainer-->#}
+{##}
+{#<!-- /main container -->#}
+{##}
+{#<div class="gap"></div>#}
+{#<div class="gap"></div>#}
+{#<div class="w100 sectionCategory">#}
+{#    <div class="container">#}
+{#        <div class="sectionCategoryIntro text-center">#}
+{#            <h1>Категории</h1>#}
+{##}
+{#            <p> Наш магазин реализует приём на комиссию следуюшие виды товаров:</p>#}
+{#        </div>#}
+{#        <div class="row subCategoryList clearfix">#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4  col-xs-mini-6  text-center ">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'bags' %}"><img#}
+{#                        src="{% static 'img/bags_and_belts.jpg'  %}" class="img-rounded" alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Сумки и ремни </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'wear' %}"><img#}
+{#                        src="{% static 'img/wear.jpeg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Одежда </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'shoes' %}"><img#}
+{#                        src="{% static 'img/shoes.jpg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Обувь </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'tableware' %}"><img#}
+{#                        src="{% static 'img/dishes.jpg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Посуда </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'pictures' %}"><img#}
+{#                        src="{% static 'img/pictures.jpg' %}" class="img-rounded" alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Картины </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'metal' %}"><img#}
+{#                        src="{% static 'img/metall.jpg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Металл и Бронза </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'porcelain' %}"><img#}
+{#                        src="{% static 'img/porcelain.jpg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Фарфор </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'crystal' %}"><img#}
+{#                        src="{% static 'img/crystal.jpg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Хрусталь </span></a></div>#}
+{#            </div>#}
+{#            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">#}
+{#                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'other' %}"><img#}
+{#                        src="{% static 'img/other_products.jpg' %}" class="img-rounded " alt="img"> </a> <a#}
+{#                        class="subCategoryTitle"><span> Прочие товары </span></a></div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!--/.row-->#}
+{##}
+{#    </div>#}
+{#    <!--/.container-->#}
+{#</div>#}
+
+    <div class="container main-container headerOffset globalPaddingBottom">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="home-intro">
+                    <h2>Добро пожаловать в комиссионный магазин <span>на Раменках</span></h2>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div class="row">
+            <div class="col-sm-10 show-case-wrapper center-block relative">
+                <div id="productShowCase" class="owl-carousel owl-theme">
+                    {% for product_image in products_images_slide %}
+                        {% include 'merchandise/product_item_home.html' %}
+                    {% endfor %}
+                </div>
+                <div style="clear: both"></div>
+                <a id="ps-next" class="ps-nav"><i class="fa fa-angle-right"></i></a>
+                <a id="ps-prev" class="ps-nav"><i class="fa fa-angle-left"></i></a>
+            </div>
+        </div>
+        <div class="row featuredPostContainer">
+            <div class="featured-category"></div>
+            <div class="col-lg-12">
+                <h3 class="boxes-title-1"><span>НОВЫЕ ПОСТУПЛЕНИЯ</span></h3>
+            </div>
+            <div style="clear: both"></div>
+            <div id="productslider" class="owl-carousel owl-theme">
+                {% for product_image in products_images %}
+                    {% include 'home/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="w100 sectionCategory">
+    <div class="container">
+        <div class="sectionCategoryIntro text-center">
+            <h1>Категории</h1>
+
+            <p> Наш магазин реализует приём на комиссию следуюшие виды товаров:</p>
+        </div>
+        <div class="row subCategoryList clearfix">
+            <div class="col-md-2 col-sm-3 col-xs-4  col-xs-mini-6  text-center ">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'bags' %}"><img
+                        src="{% static 'img/bags_and_belts.jpg'  %}" class="img-rounded" alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Сумки и ремни </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'wear' %}"><img
+                        src="{% static 'img/wear.jpeg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Одежда </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'shoes' %}"><img
+                        src="{% static 'img/shoes.jpg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Обувь </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'tableware' %}"><img
+                        src="{% static 'img/dishes.jpg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Посуда </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'pictures' %}"><img
+                        src="{% static 'img/pictures.jpg' %}" class="img-rounded" alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Картины </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'metal' %}"><img
+                        src="{% static 'img/metall.jpg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Металл и Бронза </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'porcelain' %}"><img
+                        src="{% static 'img/porcelain.jpg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Фарфор </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'crystal' %}"><img
+                        src="{% static 'img/crystal.jpg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Хрусталь </span></a></div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-4 col-xs-mini-6 text-center">
+                <div class="thumbnail"><a class="subCategoryThumb" href="{% url 'other' %}"><img
+                        src="{% static 'img/other_products.jpg' %}" class="img-rounded " alt="img"> </a> <a
+                        class="subCategoryTitle"><span> Прочие товары </span></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

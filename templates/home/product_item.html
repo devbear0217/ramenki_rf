@@ -1,0 +1,19 @@
+    <div class="item">
+        <div class="product">
+            <div class="image">
+                <div class="quickview">
+                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="{% url 'product' product_image.product.id %}" data-target="#productSetailsModalAjax">Quick View </a>
+                </div>
+                <a href="{% url 'product' product_image.product.id %}"><img src="{{ product_image.image.url }}" alt="img" class="img-responsive"></a>
+            </div>
+            <div class="description">
+                <h4><a href="{% url 'product' product_image.product.id %}"> {{ product_image.product.name }} </a></h4>
+                <p>
+                    {{ product_image.product.description|truncatechars_html:70 }}
+                </p>
+            </div>
+            <div class="action-control">
+                <a  class="btn btn-primary" href="{% url 'product' product_image.product.id %}"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Подробнее </span> </a>
+            </div>
+        </div>
+    </div>

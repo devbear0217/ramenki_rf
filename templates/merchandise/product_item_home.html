@@ -1,0 +1,17 @@
+{% load static %}
+<div class="product-slide">
+    <div class="col-sm-5 product-slide-left">
+        <a class="product-slide-img">
+            <img src="{{ product_image.image.url }}" alt="Фото товара" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-sm-7">
+        <div class="product-slide-inner">
+            <h1 class="product-title">{{ product_image.product.name }}</h1>
+            <div class="details-description">
+                <p>{{ product_image.product.description|truncatechars_html:200 }}</p>
+            </div>
+            <a title="About" class="btn btn-stroke-dark"><i class="glyphicon-shopping-cart"></i>Подробнее</a>
+        </div>
+    </div>
+</div>

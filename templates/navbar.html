@@ -1,0 +1,57 @@
+{% load static %}
+
+<div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
+    <div class="navbar-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+                    <div class="pull-left ">
+                        <ul class="userMenu ">
+                            <li><a href="#"> <span class="hidden-xs">Телефон</span><i
+                                    class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a></li>
+                            <li class="phone-number"><a href="callto:+79295135183"> <span> <i
+                                    class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs"
+                                                                                             style="margin-left:5px"> +7-929-513-5183 </span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="TSHOP"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'about' %}" target="_blank"> На главную </a></li>
+                <li class="dropdown megamenu-50width nav-item">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Категории <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="megamenu-content">
+                            <ul class="col-lg-3  col-sm-3 col-md-3 unstyled noMarginLeft newCollectionUl">
+                                <li class="no-border">
+                                    <p class="promo-1"><strong> НАША КОЛЛЕКЦИЯ </strong></p>
+                                </li>
+                                <li><a href="{% url 'wear' %}">Одежда</a></li>
+                                <li><a href="{% url 'shoes' %}">Обувь</a></li>
+                                <li><a href="{% url 'bags' %}">Сумки и ремни</a></li>
+                                <li><a href="{% url 'pictures' %}">Картины</a></li>
+                                <li><a href="{% url 'metal' %}">Металл и бронза</a></li>
+                                <li><a href="{% url 'crystal' %}">Хрусталь</a></li>
+                                <li><a href="{% url 'porcelain' %}">Фарфор</a></li><li><a href="{% url 'tableware' %}">Посуда</a></li>
+                                <li><a href="{% url 'other' %}">Прочее</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'about' %}" target="_blank"> О нас </a></li>
+            </ul>
+        </div>
+    </div>
+</div>

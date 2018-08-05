@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container main-container headerOffset">
+        <!-- Main component call to action --><div class="row">
+        <div class="breadcrumbDiv col-lg-12">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li class="active">Металл и Бронза</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row  -->
+        <div class="row">
+        <!--right column-->
+            <div class="col-lg-9 col-md-9 col-sm-12">
+            <!--/.productFilter-->
+                <div class="row  categoryProduct xsResponse clearfix">
+                    {% for product_image in products_images_metall %}
+                    {% include 'landing/product_item.html' %}
+                    {% endfor %}
+                </div>
+            <!--/.categoryProduct || product content end-->
+            <!--/.categoryFooter-->
+            </div>
+        <!--/right column end-->
+        </div>
+    <!-- /.row  -->
+    </div>
+{% endblock %}
